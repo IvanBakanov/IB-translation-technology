@@ -1,1 +1,1 @@
-# IB-translation-technology
+# IB translation technology
