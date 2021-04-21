@@ -12,7 +12,7 @@ tfw, tfh=150, 30
 pytesseract.tesseract_cmd=r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 translator=google_translator()
 
-print(Back.BLUE+'© Bakanov Ivan\nhttps://github.com/IvanBakanov')
+print(Back.BLUE+'© Bakanov Ivan\nhttps://github.com/IvanBakanov/IB-translation-technology')
 print(Style.RESET_ALL+'Version 0.02\n')
 
 dest_language=input('Destination language: ')
