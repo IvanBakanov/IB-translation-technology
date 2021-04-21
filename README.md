@@ -19,5 +19,5 @@
 3. Select a directory to store the intermediate file in
 4. The setup is finished, you can minimize all the program windows
 
-##### How to translate a word
+#### How to translate a word
 Place the cursor in the center of the word, press the "t" button on the keyboard. The translation will be displayed in the program window.
