@@ -9,7 +9,8 @@ from google_trans_new import google_translator, LANGUAGES
 # text_frame_width/2, text_frame_height/2
 tfw, tfh=150, 30 
 
-pytesseract.tesseract_cmd=r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# (!)
+pytesseract.tesseract_cmd=r'<full_path_to_your_tesseract_executable>'
 translator=google_translator()
 
 print(Back.BLUE+'© Bakanov Ivan\nhttps://github.com/IvanBakanov/IB-translation-technology')
