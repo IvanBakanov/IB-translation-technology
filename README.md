@@ -15,7 +15,7 @@
 ### User guide
 1. Run the program
 2. Fill in the "destination language" field (a source language is detected automatically)*
->* 'af': 'afrikaans',
+> 'af': 'afrikaans',
  'am': 'amharic',    
  'ar': 'arabic',     
  'az': 'azerbaijani',
