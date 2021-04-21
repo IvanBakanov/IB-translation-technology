@@ -13,11 +13,13 @@
 - google_trans_new
 
 ### User guide
-1. Run the program
-2. Fill in the "destination language" field (a source language is detected automatically)
+1. Install Tesseract (Windows: https://github.com/UB-Mannheim/tesseract/wiki)
+2. Write the full path to the Tesseract executable file in the code (!)
+3. Run the program
+4. Fill in the "destination language" field (a source language is detected automatically)
 > See Languages.txt
-3. Select a directory to store the intermediate file in
-4. The setup is finished, you can minimize all the program windows
+5. Select a directory to store the intermediate file in
+6. The setup is finished, you can minimize all the program windows
 
 #### How to translate a word
 Place the cursor in the center of the word, press the "t" button on the keyboard. The translation will be displayed in the program window.
