@@ -32,7 +32,6 @@ def On_press_func(key):
             text=image_to_string(Image.open(screenshot_path))
             for word in text.split():
                 src_language=translator.detect(word)[0]
-                print(src_language)
                 result=translator.translate(word, lang_src=src_language, lang_tgt=dest_language)
                 print('\n'+word+' -> '+result)
     except: pass
