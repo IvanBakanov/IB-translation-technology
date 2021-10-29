@@ -7,37 +7,37 @@ from pytesseract import pytesseract, image_to_string
 from google_trans_new import google_translator, LANGUAGES
 
 # text_frame_width/2, text_frame_height/2
-tfw, tfh=150, 30 
+tfw, tfh = 150, 30 
 
 # (!)
-pytesseract.tesseract_cmd=r'<full_path_to_your_tesseract_executable>'
+pytesseract.tesseract_cmd = r'<full_path_to_your_tesseract_executable>'
 translator=google_translator()
 
-print(Back.BLUE+'© Bakanov Ivan\nhttps://github.com/IvanBakanov/IB-translation-technology')
-print(Style.RESET_ALL+'Version 0.02\n')
+print(Back.BLUE+'https://github.com/IvanBakanov/IB-translation-technology')
+print(Style.RESET_ALL+'version 0.02\n')
 
-dest_language=input('Destination language: ')
+dest_language = input('Destination language: ')
 
-dir_name=filedialog.askdirectory()
-screenshot_path=dir_name+'\\screenshot.png'
+dir_name = filedialog.askdirectory()
+screenshot_path = dir_name+'\\screenshot.png'
 
-def On_press_func(key):
+def on_press_func(key):
     try:
-        if key.char=='t':
+        if key.char == 't':
             screenshot(screenshot_path)
-            image=Image.open(screenshot_path)
-            x_pos, y_pos=position().x, position().y
-            cropped=image.crop((x_pos-tfw, y_pos-tfh, x_pos+tfw, y_pos+tfh))
+            image = Image.open(screenshot_path)
+            x_pos, y_pos = position().x, position().y
+            cropped = image.crop((x_pos-tfw, y_pos-tfh, x_pos+tfw, y_pos+tfh))
             cropped.save(screenshot_path)
-            text=image_to_string(Image.open(screenshot_path))
+            text = image_to_string(Image.open(screenshot_path))
             for word in text.split():
-                src_language=translator.detect(word)[0]
-                result=translator.translate(word, lang_src=src_language, lang_tgt=dest_language)
+                src_language = translator.detect(word)[0]
+                result = translator.translate(word, lang_src=src_language, lang_tgt=dest_language)
                 print('\n'+word+' -> '+result)
     except: pass
 
 if dest_language in LANGUAGES.keys() and dir_name:      
-    listener=keyboard.Listener(on_press=On_press_func)
+    listener = keyboard.Listener(on_press=on_press_func)
     listener.start()
     listener.join()
 else:
