@@ -1,5 +1,3 @@
-Технология перевода слова с изображения с одного языка на другой.
-
 ### Основные библиотеки
 - PyAutoGUIThe
 - PyTesseract (оболочка Tesseract-OCR Engine для Python)
